@@ -1,0 +1,13 @@
+<div class="array-container" 
+[@itemChange]="items.length">
+    <div
+      *ngFor="let item of items; trackBy: trackById; let i = index"
+      class="item"
+    >
+     {{ item.value }}
+    </div>
+  </div>
+  
+  <button (click)="addItem()">Добавить элемент</button>
+  <button (click)="removeItem()">Удалить элемент</button>
+  

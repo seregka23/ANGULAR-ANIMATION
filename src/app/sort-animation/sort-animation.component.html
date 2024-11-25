@@ -1,0 +1,18 @@
+<div class="container">
+
+    @for (item of items; track $index) {
+      
+        
+        <div class="element" [@swap]="$index">
+            {{item}}
+        </div>
+    }
+    <!-- <div [@move]="isSorting? 'start' : 'right' ">
+        1
+    </div>
+
+    <div [@move]="isSorting? 'start':'left' ">
+        2
+    </div> -->
+</div>
+<button (click)="bubbleSort()">Начать сортировку</button>

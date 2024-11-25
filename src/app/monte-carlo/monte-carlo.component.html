@@ -1,0 +1,10 @@
+<div>
+  <h1>Вычисление числа π методом Монте-Карло</h1>
+  <label>
+    Количество итераций:
+    <input type="number" [(ngModel)]="iterations" min="1000">
+  </label>
+  <button (click)="startCalculation()">Начать расчет</button>
+  <button (click)="stopCalculation()" [disabled]="!isWorking">Остановить вычисление</button>
+  <p *ngIf="piEstimate !== null">Оценка числа π: {{ piEstimate }}</p>
+</div>

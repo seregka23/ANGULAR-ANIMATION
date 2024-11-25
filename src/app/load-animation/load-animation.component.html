@@ -1,0 +1,13 @@
+<div class="container">
+    @for (item of items; track item) {
+    <div class="item" #item>
+        <span class="element-name">{{item.name}}</span>
+        <div class="percente">
+            {{item.percente}}
+        </div>
+    </div>
+    }
+</div>
+
+<br>
+<button (click)="swapTwoElements(0,1)">Swap</button>

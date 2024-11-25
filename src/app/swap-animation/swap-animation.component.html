@@ -1,0 +1,28 @@
+<!-- <div class="container" [@animation]="items">
+        @for (item of items; track $index) {
+        <div class="item">
+            {{item}}
+        </div>
+        }
+</div>
+<button (click)="swapItems(0, 1)">Swap First Two Elements</button> -->
+
+
+<div class="container" [@swapAnimation]="animationState">
+  <div *ngFor="let item of items; let i = index; trackBy: trackById" class="item" [ngClass]="item.state"
+    [appAddStyle]="{ countElements: items.length, elementNumber: item.value }">
+    {{ item.value }}
+  </div>
+</div>
+<button (click)="swapItems(2, 3)" [disabled]="isSorting">Swap First Two Elements</button>
+<button (click)="bubbleSort()" [disabled]="isSorting">Sort</button>
+
+<!-- <div class="array-container" [@swapAnimation]>
+    <div
+      *ngFor="let item of items; let i = index"
+      class="item"
+      (click)="swap(i, (i + 1) % items.length)"
+    >
+      {{ item }}
+    </div>
+  </div> -->

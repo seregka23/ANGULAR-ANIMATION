@@ -1,0 +1,14 @@
+<div class="container">
+    @for (item of items; track item) {
+    <div class="item" #item [appAddStyle]="{ countElements: items.length, elementNumber: item }">
+        {{item}}
+    </div>
+    }
+</div>
+
+<button (click)="regenerateArray()">Regenerate array</button>
+<button (click)="bubbleSort()" [disabled]="isSorting">Buble Sort</button>
+<button (click)="cocktailShakerSort()" [disabled]="isSorting">Cocktail Shaker Sort</button>
+<button (click)="combSort()" [disabled]="isSorting">Comb Sort</button>
+<button (click)="QuickSortImpl(0,items.length-1)" [disabled]="isSorting">Quick Sort</button>
+<button (click)="pancakeSort()" [disabled]="isSorting">Pancake Sort</button>
